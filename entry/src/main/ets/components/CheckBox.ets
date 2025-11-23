@@ -7,7 +7,7 @@ export default struct CheckBox{
         .selectedColor($r('app.color.blue_color'))
         .shape(CheckBoxShape.ROUNDED_SQUARE)
         .onChange((value: boolean) => {
-          console.info('Checkbox1 change is'+ value)
+          console.info(`Checkbox1 change is ${value}`)
         })
         .unselectedColor(Color.Red)
         .width('5%')
@@ -21,7 +21,7 @@ export default struct CheckBox{
         .unselectedColor(Color.Red)
         .shape(CheckBoxShape.ROUNDED_SQUARE)
         .onChange((value: boolean) => {
-          console.info('Checkbox2 change is' + value)
+          console.info(`Checkbox2 change is ${value}`)
         })
         .width('5%')
       Text('Male')
