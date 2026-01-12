@@ -17,7 +17,7 @@ const myCurves: MyCurve[] = [
   new MyCurve(' Ease', Curve.Ease, '#ff9416', 120),
   new MyCurve(' EaseIn', Curve.EaseIn, '#fde912', 90),
   new MyCurve(' EaseOut', Curve.EaseOut, '#44e643', 54),
-  new MyCurve(' EaseInOut', Curve.EaseInOut, '#3caaff', 18),
+  new MyCurve(' EaseInOut', Curve.EaseInOut, '#3caaff', 18)
 ]
 
 @Component
@@ -77,7 +77,7 @@ export struct TabPage {
             })
           }, (item: string, index: number) => item)
           Column() {
-            Text('BMI: ' + this.bmiValue)
+            Text(`BMI: ${this.bmiValue}`)
               .fontSize(12)
               .fontWeight(FontWeight.Bold)
               .fontColor($r('app.color.blue_color'))

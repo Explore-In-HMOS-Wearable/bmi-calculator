@@ -7,9 +7,11 @@ BMI Calculator is a practical health tool that allows users to calculate their B
 # Preview
 
 <div>
-   <img src="./images/Animation1.gif" width="25%"/>
-   <img src="./images/output1.png" width="25%"/>
-   <img src="./images/output2.png" width="25%"/>
+<img src="./screenshots/Animation1.gif" width="25%"/>
+
+<img src="./screenshots/output1.png" width="25%"/>
+
+<img src="./screenshots/output2.png" width="25%"/>
 </div>
 
 # Use Cases
@@ -31,7 +33,7 @@ BMI Calculator is a practical health tool that allows users to calculate their B
 - **Tools**: DevEco Studio Vers 5.1.0.842
 - **Libraries**: @kit.ArkUI
 
-# Project Directory
+# Directory Structure
    ```
    entry/src/main/ets/
     ├── components

@@ -5,8 +5,8 @@ import { TabPage } from './TabPage';
 @Entry
 @Component
 struct Index {
-  @State weight_value: number = 0
-  @State height_value: number = 0
+  @State weightValue: number = 0
+  @State heightValue: number = 0
   @State bmi: number = 0
   @Provide('NavPathStack') pageStack: NavPathStack = new NavPathStack()
 
@@ -35,7 +35,7 @@ struct Index {
               .caretColor(Color.Red)
               .fontColor(Color.Black)
               .fontSize(12)
-              .onChange(val => this.weight_value = parseInt(val))
+              .onChange(val => this.weightValue = parseInt(val))
           }
           .width('60%')
           .height('14%')
@@ -45,13 +45,13 @@ struct Index {
               .fontSize(12)
               .fontWeight(FontWeight.Bold)
               .fontColor($r('app.color.blue_color'))
-            TextInput({ placeholder: 'type your weight' })
+            TextInput({ placeholder: 'type your height' })
               .placeholderColor(Color.Gray)
               .placeholderFont({ size: 12, weight: 500 })
               .caretColor(Color.Red)
               .fontColor(Color.Black)
               .fontSize(12)
-              .onChange(val => this.height_value = parseInt(val))
+              .onChange(val => this.heightValue = parseInt(val))
           }
           .width('60%')
           .height('14%')
@@ -64,7 +64,7 @@ struct Index {
             .fontWeight(FontWeight.Bold)
             .borderColor(Color.Red)
             .onClick(() => {
-              this.bmi = this.weight_value / ((this.height_value / 100)**2)
+              this.bmi = this.weightValue / ((this.heightValue / 100)**2)
               this.pageStack.pushPath({
                 name: 'TabPage',
                 param: this.bmi.toFixed(1)
