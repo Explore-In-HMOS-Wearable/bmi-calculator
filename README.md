@@ -1,17 +1,12 @@
-> **Note:** To access all shared projects, get information about environment setup, and view other guides, please visit [Explore-In-HMOS-Wearable Index](https://github.com/Explore-In-HMOS-Wearable/hmos-index).
-
 # BMI Calculator
 
-BMI Calculator is a practical health tool that allows users to calculate their Body Mass Index quickly and effortlessly. By entering height and weight, users can see which BMI category they fall into and gain a better understanding of their overall health. The app is designed with a clear, user-friendly interface, making it suitable for people of all ages. Whether you are focused on fitness goals, tracking lifestyle changes, or simply keeping an eye on your wellbeing, this app offers an easy way to stay informed and make healthier choices.
-
+BMI Calculator is a practical health tool that allows users to calculate their Body Mass Index quickly and effortlessly. By entering height and weight, users can see which BMI category they fall into and gain a better understanding of their overall health. The app also keeps a local history of past calculations, so users can track changes over time. Designed with a clear, user-friendly interface, it is suitable for people of all ages. Whether you are focused on fitness goals, tracking lifestyle changes, or simply keeping an eye on your wellbeing, this app offers an easy way to stay informed and make healthier choices.
 # Preview
 
 <div>
-<img src="./screenshots/Animation1.gif" width="25%"/>
-
-<img src="./screenshots/output1.png" width="25%"/>
-
-<img src="./screenshots/output2.png" width="25%"/>
+  <img src="./screenshots/1.gif" width="25%"/>
+  <img src="./screenshots/1.png" width="25%"/>
+  <img src="./screenshots/2.png" width="25%"/>
 </div>
 
 # Use Cases
@@ -22,26 +17,40 @@ BMI Calculator is a practical health tool that allows users to calculate their B
 
 3. Preventive Awareness: By identifying whether they are at risk due to being overweight or underweight, users can take early steps toward healthier living.
 
-4. Motivation Tool: Regular tracking of BMI encourages users to stay consistent with their health and fitness goals.
+4. Progress Tracking: The history page stores every past calculation with date, weight, height, and BMI value, letting users review their progress over time at a glance.
 
-5. Educational Aid: The app can be used in schools or health workshops to teach individuals about the importance of balanced body weight and wellness monitoring.
+5. Motivation Tool: Regular tracking of BMI encourages users to stay consistent with their health and fitness goals.
 
-# Tech Stack
+6. Educational Aid: The app can be used in schools or health workshops to teach individuals about the importance of balanced body weight and wellness monitoring.
 
+# Technology
+
+## Stack
 - **Languages**: ArkTS
 - **Frameworks**: HarmonyOS SDK 5.0.0(12)
 - **Tools**: DevEco Studio Vers 5.1.0.842
-- **Libraries**: @kit.ArkUI
+- **Libraries**: @kit.ArkUI, @kit.ArkData, @kit.SensorServiceKit, @kit.AbilityKit
+
+## Required Permissions
+* `"ohos.permission.VIBRATE"`
 
 # Directory Structure
    ```
    entry/src/main/ets/
-    ├── components
-    │ ├── CheckBox.ets          // CheckBox component and UI design
-    │ ├── Header.ets            // Header's UI design file
-    ├── pages
-    │ ├── TabPage.ets           // It creates a new UI design using the height and weight values from the first page. It also displays the BMI value on the screen            
-    │ ├── Index.ets             // Home Page
+ ├── components
+ │   ├── CheckBox.ets                 // Gender selection component
+ │   ├── Header.ets                   // App header component
+ │   ├── CustomValuePickerDialog.ets  // Reusable picker dialog for weight/height input
+ ├── entryability
+ │   ├── EntryAbility.ets             // Application entry ability
+ ├── entrybackupability
+ │   ├── EntryBackupAbility.ets       // Backup extension ability
+ ├── pages
+ │   ├── Index.ets                    // Home page with weight/height input and BMI calculation
+ │   ├── TabPage.ets                  // BMI result page with gauge visualization and category display
+ │   ├── HistoryPage.ets              // Past BMI records listed in an ArcList
+ ├── utils
+ │   ├── DBManager.ts                 // Singleton database manager using relationalStore
    ```
 
 # Constraints and Restrictions

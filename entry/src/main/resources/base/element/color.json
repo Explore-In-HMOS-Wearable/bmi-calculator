@@ -2,11 +2,47 @@
   "color": [
     {
       "name": "start_window_background",
-      "value": "#FFFFFF"
+      "value": "#000000"
     },
     {
       "name": "blue_color",
       "value": "#37a1e0"
+    },
+    {
+      "name": "background_color",
+      "value": "#000000"
+    },
+    {
+      "name": "text_primary",
+      "value": "#FFFFFF"
+    },
+    {
+      "name": "text_secondary",
+      "value": "#999999"
+    },
+    {
+      "name": "accent_color",
+      "value": "#37a1e0"
+    },
+    {
+      "name": "bmi_underweight",
+      "value": "#3CAAFF"
+    },
+    {
+      "name": "bmi_normal",
+      "value": "#44E643"
+    },
+    {
+      "name": "bmi_overweight",
+      "value": "#FDE912"
+    },
+    {
+      "name": "bmi_obese1",
+      "value": "#FF9416"
+    },
+    {
+      "name": "bmi_obese2",
+      "value": "#F60207"
     }
   ]
 }

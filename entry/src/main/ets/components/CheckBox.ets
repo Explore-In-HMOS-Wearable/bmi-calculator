@@ -1,33 +1,46 @@
 @Component
-export default struct CheckBox{
+export default struct CheckBox {
+  @Link isMale: boolean
+  onGenderChange?: () => void
 
   build() {
     Row() {
-      Checkbox({ name: 'checkbox1', group: 'checkboxGroup' })
-        .selectedColor($r('app.color.blue_color'))
-        .shape(CheckBoxShape.ROUNDED_SQUARE)
-        .onChange((value: boolean) => {
-          console.info(`Checkbox1 change is ${value}`)
-        })
-        .unselectedColor(Color.Red)
-        .width('5%')
-      Text('Female')
-        .fontSize(12)
-        .fontWeight(FontWeight.Bold)
-        .fontColor($r('app.color.blue_color'))
+      Row() {
+        Checkbox({ name: 'female', group: 'genderGroup' })
+          .select(!this.isMale)
+          .selectedColor($r('app.color.accent_color'))
+          .shape(CheckBoxShape.CIRCLE)
+          .onChange((value: boolean) => {
+            if (value) {
+              this.isMale = false
+              this.onGenderChange?.()
+            }
+          })
+        Text($r('app.string.female'))
+          .fontSize('14fp')
+          .fontColor($r('app.color.text_primary'))
+          .margin({ left: '4vp' })
+      }
+      .margin({ right: '12vp' })
 
-      Checkbox({ name: 'checkbox2', group: 'checkboxGroup' })
-        .selectedColor(0x39a2db)
-        .unselectedColor(Color.Red)
-        .shape(CheckBoxShape.ROUNDED_SQUARE)
-        .onChange((value: boolean) => {
-          console.info(`Checkbox2 change is ${value}`)
-        })
-        .width('5%')
-      Text('Male')
-        .fontSize(12)
-        .fontWeight(FontWeight.Bold)
-        .fontColor($r('app.color.blue_color'))
+      Row() {
+        Checkbox({ name: 'male', group: 'genderGroup' })
+          .select(this.isMale)
+          .selectedColor($r('app.color.accent_color'))
+          .shape(CheckBoxShape.CIRCLE)
+          .onChange((value: boolean) => {
+            if (value) {
+              this.isMale = true
+              this.onGenderChange?.()
+            }
+          })
+        Text($r('app.string.male'))
+          .fontSize('14fp')
+          .fontColor($r('app.color.text_primary'))
+          .margin({ left: '4vp' })
+      }
     }
+    .width('100%')
+    .justifyContent(FlexAlign.Center)
   }
 }

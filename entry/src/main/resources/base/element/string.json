@@ -2,19 +2,99 @@
   "string": [
     {
       "name": "module_desc",
-      "value": "module description"
+      "value": "BMI Calculator for HarmonyOS Wearable"
     },
     {
       "name": "EntryAbility_desc",
-      "value": "description"
+      "value": "HarmonyOS Wearable BMI Calculator"
     },
     {
       "name": "EntryAbility_label",
-      "value": "label"
+      "value": "BMI Calc"
     },
     {
       "name": "header",
       "value": "BMI Calculator"
+    },
+    {
+      "name": "weight",
+      "value": "Weight (kg)"
+    },
+    {
+      "name": "height",
+      "value": "Height (cm)"
+    },
+    {
+      "name": "calculate",
+      "value": "Calculate"
+    },
+    {
+      "name": "history",
+      "value": "History"
+    },
+    {
+      "name": "bmi_result",
+      "value": "BMI: %s"
+    },
+    {
+      "name": "gender",
+      "value": "Gender"
+    },
+    {
+      "name": "male",
+      "value": "Male"
+    },
+    {
+      "name": "female",
+      "value": "Female"
+    },
+    {
+      "name": "tab",
+      "value": "TabPage"
+    },
+    {
+      "name": "category_underweight",
+      "value": "Underweight"
+    },
+    {
+      "name": "category_normal",
+      "value": "Normal"
+    },
+    {
+      "name": "category_overweight",
+      "value": "Overweight"
+    },
+    {
+      "name": "category_obese1",
+      "value": "Obese Class I"
+    },
+    {
+      "name": "category_obese2",
+      "value": "Obese Class II"
+    },
+    {
+      "name": "msg_underweight",
+      "value": "Your journey to strength starts here—small steps can lead to powerful transformations!"
+    },
+    {
+      "name": "msg_normal",
+      "value": "You are in a great place—keep up the balance and stay strong and energized!"
+    },
+    {
+      "name": "msg_overweight",
+      "value": "Every healthy choice counts—you are closer to your goals than you think!"
+    },
+    {
+      "name": "msg_obese",
+      "value": "You have the power to change your story—every effort is a step toward a brighter, healthier future!"
+    },
+    {
+      "name": "bmi_header",
+      "value": "Your BMI Result"
+    },
+    {
+      "name": "bmi_label",
+      "value": "BMI"
     }
   ]
 }
