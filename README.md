@@ -1,3 +1,5 @@
+> **Note:** To access all shared projects, get information about environment setup, and view other guides, please visit [Explore-In-HMOS Index](https://github.com/Explore-In-HMOS/hmos-index).
+
 # BMI Calculator
 
 BMI Calculator is a practical health tool that allows users to calculate their Body Mass Index quickly and effortlessly. By entering height and weight, users can see which BMI category they fall into and gain a better understanding of their overall health. The app also keeps a local history of past calculations, so users can track changes over time. Designed with a clear, user-friendly interface, it is suitable for people of all ages. Whether you are focused on fitness goals, tracking lifestyle changes, or simply keeping an eye on your wellbeing, this app offers an easy way to stay informed and make healthier choices.
